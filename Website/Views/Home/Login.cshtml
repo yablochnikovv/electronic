@@ -1,0 +1,55 @@
+﻿@model  Website.Models.User
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+}
+
+<div class="row justify-content-md-center">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                Увійти в систему:
+            </div>
+            <div class="card-body">
+                @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Email)
+                        @Html.TextBoxFor(m => m.Email, "", new { @class = "form-control", @placeholder = "Email" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "badge badge-danger" })
+
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Password)
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "badge badge-danger" })
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="submit" class="btn btn-primary" value="Login" /> <input type="submit" name="submit" value="Cancel" class="btn btn-primary" onclick="location.href='/'" />
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="content-sidebar">
+        <h4>Категорії</h4>
+        <ul>
+            <li><a href="#">Кабель, провід</a></li>
+            <li><a href="#">Автоматика</a></li>
+            <li><a href="#">Системи для прокладання кабелю</a></li>
+            <li><a href="#">Кабельна арматура</a></li>
+            <li><a href="#">Шафи, бокси, корпуси</a></li>
+            <li><a href="#">Датчики, розетки, вимикачі, подовжувачі</a></li>
+            <li><a href="#">Світлотехніка</a></li>
+            <li><a href="#">Вимірювальні прилади</a></li>
+            <li><a href="#">Стабілізатори, лічильники, ЯТП, тепла підлога </a></li>
+            <li><a href="#">Інструмент, силові роз'єми, хомути, ізолента, маркери</a></li>
+            <li><a href="#">Мережеве обладнання </a></li>
+            <li><a href="#">Сонячні електростанції</a></li>
+        </ul>
+    </div>
+</div>
+
+
+

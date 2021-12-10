@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device=width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/flexslider.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/responsiveslides.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/style1.css" rel="stylesheet" />
+    <a href="~/fonts/glyphicons-halflings-regular.eot"></a>
+    <a href="~/fonts/glyphicons-halflings-regular.ttf"></a>
+    <a href="~/fonts/glyphicons-halflings-regular.woff"></a>
+    <a href="~/fonts/glyphicons-halflings-regular.woff2"></a>
+    <script src="~/js/imagezoom.js"></script>
+    <script src="~/js/jquery.flexslider.js"></script>
+    <script src="~/js/jquery.livequery.js"></script>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/responsiveslides.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!----start-Header---->
+        <div class="header">
+            <div class="search-bar">
+                <form>
+                    <input type="text"><input type="submit" value="Search" />
+                </form>
+            </div>
+            <div class="clear"> </div>
+            <div class="header-top-nav">
+                <ul>
+                    <li><a href="#"><span>shopping cart&nbsp;&nbsp;: </span></a><label> &nbsp;noitems</label></li>
+        </ul>
+    </div>
+            <div class="clear"> </div>
+        </div>
+    </div>
+    <div class="clear"> </div>
+    <div class="top-header">
+        <div class="wrap">
+            <!----start-logo---->
+            <div class="logo">
+                <!--- <a href="index.html"> -->
+                </li><img src="~/images/logotype.png" title="logo" /></a>
+            </div>
+            <!----end-logo---->
+            <!----start-top-nav---->
+            <div class="top-nav">
+                <ul>
+                    <li>@Html.ActionLink("Головна", "Index", "Home", new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Про нас", "About", "Home", new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Магазин", "Store", "Home", new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Блог", "Blog", "Home", new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Контакти", "Contact", "Home", new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Логін", "Login", "Home", new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Реєстрація", "Register", "Home", new { @class = "nav-link" })</li>
+                    <!--  <li>@Html.ActionLink("Корзина", "Index3", "Home", new { @class = "nav-link" })</li> -->
+                </ul>
+            </div>
+            <div class="clear"> </div>
+        </div>
+    </div>
+    <!----End-top-nav---->
+    <!----End-Header----><!----start-Header---->
+    <div>
+        @RenderBody()
+    </div>
+</body>
+<div class="footer">
+    <div class="wrap">
+        <div class="section group">
+            <div class="col_1_of_4 span_1_of_4">
+                <h3>Інша інформація:</h3>
+                <p>Сайт зроблений для курсової роботи з предмету: Технологія компонентного програмування для веб. Написаний на: ASP NET MVC 5. Виконав: <a href="https://www.instagram.com/yablochnikovv/">yablochnikovv</a></p>
+            </div>
+            <div class="col_1_of_4 span_1_of_4">
+                <h3>Останні новини:</h3>
+                <li><a href=""><p>Використання IP-камер на сонячних батареях.</p></li>
+                <p>Головні технологічні тенденції 2021 року.</p>
+                <p>Ринок розумного будинку готовий до сильного росту.</p>
+            </div>
+            <div class="col_1_of_4 span_1_of_4">
+                <h3>Місцезнаходження магазину:</h3>
+                <p>м.Івано-Франківськ, вул.Шевченка, 31б</p>
+                <h3>Онлайн підтримка:</h3>
+                <p>+(380)-1234-56789</p>
+                <p>+(380)-1234-56780</p>
+            </div>
+            <div class="col_1_of_4 span_1_of_4 footer-lastgrid">
+                <h3>Будьте завжди в курсі новинок та акцій!</h3>
+                <form>
+                    <input type="text"><input type="submit" value="go" />
+                </form>
+                <h3>Підписуйтесь на нас:</h3>
+                <ul>
+                    <li><a href="https://twitter.com/?lang=ru"><img src="~/images/twitter.png" title="twitter" />Twitter</a></li>
+                    <li><a href="https://www.facebook.com/"><img src="~/images/facebook.png" title="Facebook" />Facebook</a></li>
+                    <li><a href="https://ru.wikipedia.org/wiki/RSS"><img src="~/images/rss.png" title="Rss" />Rss</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="clear"> </div>
+    <div class="wrap">
+        <div class="copy-right">
+            <p>&copy; 2021 ELECTRONIC - електрика для твого дому. | Design by  <a href="https://www.instagram.com/yablochnikovv/">yablochnikovv</a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
